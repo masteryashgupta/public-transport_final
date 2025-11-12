@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "Passenger App",
+    "slug": "passenger-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.publictransport.passenger",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "This app needs your location to show nearby buses.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "This app needs your location to show nearby buses."
+      }
+    },
+    "android": {
+      "package": "com.publictransport.passenger",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION"
+      ],
+      "config": {
+        "googleMaps": {
+          "apiKey": ""
+        }
+      }
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow Passenger App to use your location to show nearby buses."
+        }
+      ]
+    ]
+  }
+}
+

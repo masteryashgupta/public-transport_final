@@ -1,0 +1,46 @@
+{
+  "expo": {
+    "name": "Driver App",
+    "slug": "driver-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.publictransport.driver",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "This app needs your location to track the bus in real-time.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "This app needs your location to track the bus in real-time.",
+        "NSLocationAlwaysUsageDescription": "This app needs your location to track the bus even in background.",
+        "UIBackgroundModes": ["location"]
+      }
+    },
+    "android": {
+      "package": "com.publictransport.driver",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "FOREGROUND_SERVICE"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow Driver App to track your location to show bus position to passengers.",
+          "locationAlwaysPermission": "Allow Driver App to track your location in background to show bus position to passengers.",
+          "isAndroidBackgroundLocationEnabled": true,
+          "isAndroidForegroundServiceEnabled": true
+        }
+      ]
+    ]
+  }
+}
